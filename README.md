@@ -1,5 +1,7 @@
 # ProxmoxMCP
 
+> This project is a fork of [canvrno/ProxmoxMCP](https://github.com/canvrno/ProxmoxMCP) with additional features and improvements.
+
 A comprehensive Model Context Protocol (MCP) server for interacting with Proxmox hypervisors. This server provides a rich set of tools for managing Proxmox VE clusters, nodes, virtual machines, containers, backups, and tasks.
 
 ![ProxmoxMCP](https://github.com/user-attachments/assets/e32ab79f-be8a-420c-ab2d-475612150534)
