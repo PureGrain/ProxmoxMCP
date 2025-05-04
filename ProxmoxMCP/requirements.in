@@ -1,0 +1,5 @@
+# Core dependencies
+mcp @ git+https://github.com/modelcontextprotocol/python-sdk.git
+proxmoxer>=2.0.1,<3.0.0
+requests>=2.31.0,<3.0.0
+pydantic>=2.7.2,<3.0.0

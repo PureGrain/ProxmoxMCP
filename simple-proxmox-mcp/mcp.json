@@ -1,0 +1,89 @@
+{
+  "servers": [
+    {
+      "name": "simple-proxmox-mcp",
+      "type": "stdio",
+      "command": "./manage-server.sh start",
+      "startup_command": "./roo-startup.sh",
+      "shutdown_command": "./manage-server.sh stop",
+      "status_command": "./manage-server.sh status",
+      "working_directory": "${__dirname}",
+      "description": "Simple MCP server for Proxmox API",
+      "auto_start": true,
+      "tools": [
+        {
+          "name": "get_nodes",
+          "description": "List all nodes in the Proxmox cluster with their status, CPU, memory, and role information.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        {
+          "name": "get_node_status",
+          "description": "Get detailed status information for a specific Proxmox node.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "node": {
+                "type": "string",
+                "description": "Name/ID of node to query (e.g. 'pve1', 'proxmox-node2')"
+              }
+            },
+            "required": ["node"]
+          }
+        },
+        {
+          "name": "get_vms",
+          "description": "List all virtual machines across the cluster with their status and resource usage.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        {
+          "name": "execute_vm_command",
+          "description": "Execute commands in a VM via QEMU guest agent.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "node": {
+                "type": "string",
+                "description": "Host node name (e.g. 'pve1', 'proxmox-node2')"
+              },
+              "vmid": {
+                "type": "string",
+                "description": "VM ID number (e.g. '100', '101')"
+              },
+              "command": {
+                "type": "string",
+                "description": "Shell command to run (e.g. 'uname -a', 'systemctl status nginx')"
+              }
+            },
+            "required": ["node", "vmid", "command"]
+          }
+        },
+        {
+          "name": "get_storage",
+          "description": "List storage pools across the cluster with their usage and configuration.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        {
+          "name": "get_cluster_status",
+          "description": "Get overall Proxmox cluster health and configuration status.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      ]
+    }
+  ]
+}

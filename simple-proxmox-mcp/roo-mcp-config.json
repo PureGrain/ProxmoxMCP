@@ -1,0 +1,37 @@
+{
+  "mcp_servers": [
+    {
+      "name": "simple-proxmox-mcp",
+      "type": "local",
+      "startup_script": "./register-mcp.sh",
+      "description": "Simple MCP server for Proxmox API",
+      "auto_start": true,
+      "tools": [
+        {
+          "name": "get_nodes",
+          "description": "List all nodes in the Proxmox cluster with their status, CPU, memory, and role information."
+        },
+        {
+          "name": "get_node_status",
+          "description": "Get detailed status information for a specific Proxmox node."
+        },
+        {
+          "name": "get_vms",
+          "description": "List all virtual machines across the cluster with their status and resource usage."
+        },
+        {
+          "name": "execute_vm_command",
+          "description": "Execute commands in a VM via QEMU guest agent."
+        },
+        {
+          "name": "get_storage",
+          "description": "List storage pools across the cluster with their usage and configuration."
+        },
+        {
+          "name": "get_cluster_status",
+          "description": "Get overall Proxmox cluster health and configuration status."
+        }
+      ]
+    }
+  ]
+}
