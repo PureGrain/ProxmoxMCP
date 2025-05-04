@@ -50,7 +50,7 @@ Choose the version that best fits your needs:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/proxmox-mcp.git
+   git clone https://github.com/PureGrain/ProxmoxMCP.git
    cd proxmox-mcp
    ```
 
