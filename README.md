@@ -1,5 +1,8 @@
 # ProxmoxMCP
 
+> ⚠️ **This repository is deprecated. Please use the new, actively maintained repo:**  
+> [ProxmoxEmCP](https://github.com/PureGrain/ProxmoxEmCP)
+
 > This project is a fork of [canvrno/ProxmoxMCP](https://github.com/canvrno/ProxmoxMCP) with additional features and improvements.
 
 A comprehensive Model Context Protocol (MCP) server for interacting with Proxmox hypervisors. This server provides a rich set of tools for managing Proxmox VE clusters, nodes, virtual machines, containers, backups, and tasks.
